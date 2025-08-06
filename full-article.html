@@ -15,6 +15,8 @@
     <h1 id="article-main-title" class="mb-3"></h1>
     <p id="article-source-info" class="article-source"></p>
     <img id="article-main-image" src="" alt="" class="article-img">
+    <p id="article-main-description" class="article-description"></p>
+    <br>
     <p id="article-main-content" class="article-content"></p>
     <a id="article-original-link" href="#" target="_blank" class="btn btn-danger mt-3">Read Full Article at Source</a>
   </div>
@@ -41,7 +43,8 @@
         mainImage.alt = article.title;
       }
 
-      document.getElementById('article-main-content').textContent = article.content || article.description || 'Content not available.';
+      document.getElementById('article-main-description').textContent =  article.description || 'Description not available.';
+      document.getElementById('article-main-content').textContent = article.content || 'Content not available.';
       document.getElementById('article-original-link').href = article.url;
     } else {
       document.querySelector('.article-container').innerHTML = '<p class="text-danger text-center">No article data found.</p><button onclick="window.history.back()" class="btn btn-secondary mt-3">Go Back</button>';

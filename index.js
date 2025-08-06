@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const newsContainer = document.getElementById('news-container');
     const placeholderImage = 'https://via.placeholder.com/150x150.png?text=Image+Not+Found';
-    const logoFallbackImage = 'images/newspaper.png'; // Path to your logo
+    const logoFallbackImage = 'images/newspaper.png';
 
 
     // Global state variables for country and category
@@ -12,10 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
         'us': 'USA',
         'gb': 'UK',
         'fr': 'France',
-        'de': 'Germany',
+        'ru': 'Russia',
         'ca': 'Canada',
+        'in': 'India',
         'au': 'Australia'
     };
+
 
     const fetchNews = async (countryCode, category) => {
         const url = `https://saurav.tech/NewsAPI/top-headlines/category/${category}/${countryCode}.json`;
@@ -45,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <div class="d-none d-lg-block">
                                     <h5 class="card-title-desktop mb-0">${article.source.name}</h5>
                                     <p class="card-text-desktop">${article.description || 'No description available.'}</p>
-                                    <a href="${article.url}" class="read-more-link-desktop mt-auto" target="_blank">read more</a>
+                                    <a href="${article.url}" class="read-more-link-desktop mt-auto"  target="_blank">read more</a>
                                 </div>
 
                                 <div class="d-lg-none mobile-card-body-content">

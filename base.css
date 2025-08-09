@@ -1,0 +1,32 @@
+.currency-marquee-wrapper {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 0;
+    margin-top: 1rem;
+    border-radius: 2px;
+    overflow: hidden;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    position: relative;
+    z-index: 1;
+}
+
+.marquee-content-wrapper {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee 25s linear infinite;
+    gap: 2rem;
+}
+.marquee-content {
+    display: flex;
+    flex-shrink: 0;
+    gap: 2rem;
+}
+.marquee-content span {
+    font-weight: 500;
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}

@@ -1,0 +1,308 @@
+body {
+    background-color: #1c1c1e;
+    color: #f2f2f7;
+}
+
+.top-banner {
+    background-color: #0a0a0a;
+    color: #f2f2f7;
+    padding: 30px 0;
+    text-align: center;
+}
+.top-banner h1 {
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+.navbar {
+    background-color: #2c2c2e;
+    border-bottom: 1px solid #3a3a3c;
+    padding: 10px 0;
+}
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #f2f2f7;
+}
+.nav-flags img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 8px;
+    border: 1px solid #444;
+}
+.nav-flags .flag-item {
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.nav-flags .flag-item.active img {
+    border: 2px solid #ff453a;
+}
+.navbar-nav .nav-link {
+    color: #d1d1d6;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+.navbar-nav .nav-link.active {
+    color: #ff453a;
+    font-weight: bold;
+}
+.btn-danger {
+    background-color: #ff453a;
+    border-color: #ff453a;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.article-container {
+    max-width: 1500px;
+    margin: 40px auto;
+    background-color: #2c2c2e;
+    padding: 20px;
+    border-radius: 8px;
+}
+.article-img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.article-source {
+    color: #a1a1a6;
+    font-style: italic;
+}
+.article-content {
+    white-space: pre-wrap;
+}
+
+.news-card {
+    border: none;
+    background-color: #2c2c2e;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-radius: 8px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+.card-img-desktop {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: none;
+}
+.card-placeholder {
+    width: 50px;
+    height: 50px;
+    background-color: #3a3a3c;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.card-title-desktop {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #f2f2f7;
+}
+.card-text-desktop {
+    font-size: 0.9rem;
+    color: #d1d1d6;
+    margin-top: 10px;
+    margin-bottom: 1rem;
+}
+.read-more-link-desktop {
+    text-decoration: none;
+    color: #a1a1a6;
+    font-size: 0.9rem;
+    font-weight: 500;
+    align-self: flex-end;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .top-banner {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: left;
+    }
+    .top-banner h1 {
+        font-size: 1.5rem;
+        font-weight: normal;
+        margin-left: 15px;
+    }
+
+    .navbar {
+        padding: 0;
+        border-bottom: none;
+        flex-wrap: nowrap;
+    }
+    .navbar .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .navbar-brand {
+        font-size: 1.2rem;
+        margin-right: auto;
+    }
+    .nav-flags {
+        margin-left: auto;
+    }
+    .nav-flags .dropdown-toggle {
+        display: flex;
+        align-items: center;
+        color: #f2f2f7;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 10px 0;
+    }
+    .nav-flags img {
+        width: 30px;
+        height: auto;
+        margin-right: 5px;
+        border-radius: 10%;
+        border: 1px solid #444;
+    }
+    .nav-flags .flag-item {
+        display: none;
+    }
+    .nav-flags .dropdown-item.active img {
+        border: 2px solid #ff453a;
+    }
+
+    .currency-marquee-wrapper {
+        padding: 5px 0;
+        margin-top: 0.5rem;
+        background-color: #1c1c1e;
+        color: #f2f2f7;
+    }
+    .marquee-content span {
+        padding: 0 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .card-placeholder,
+    .card-title-desktop,
+    .card-text-desktop,
+    .read-more-link-desktop,
+    .card-img-desktop {
+        display: none !important;
+    }
+
+    .mobile-tabs {
+        display: flex;
+        border-bottom: none;
+        justify-content: start;
+        gap: 15px;
+        background-color: #2c2c2e;
+        padding: 10px 15px;
+        border-bottom: 1px solid #3a3a3c;
+    }
+    .mobile-tabs .nav-link {
+        color: #d1d1d6;
+        border: none;
+        border-bottom: 2px solid transparent;
+        padding: 0.75rem 0.5rem;
+        font-size: 0.9rem;
+    }
+    .mobile-tabs .nav-link.active {
+        color: #ff453a;
+        border-bottom-color: #ff453a;
+        font-weight: bold;
+        background-color: transparent;
+    }
+
+    .news-card {
+        box-shadow: none;
+        border: 1px solid #3a3a3c;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        min-height: unset;
+        background-color: #2c2c2e;
+    }
+    .card-body {
+        padding: 15px;
+    }
+    .mobile-card-body-content {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+    .mobile-card-text-content {
+        flex-grow: 1;
+    }
+    .card-img-mobile {
+        display: block;
+        width: 100px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        flex-shrink: 0;
+    }
+    .mobile-card-title {
+        font-weight: 600;
+        font-size: 1rem;
+        color: #f2f2f7;
+        margin-right: 10px;
+    }
+    .mobile-card-text {
+        display: block;
+        font-size: 0.85rem;
+        color: #d1d1d6;
+        margin-bottom: 0.5rem;
+    }
+    .mobile-card-red-dot {
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: #ff453a;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+    .mobile-read-more-btn {
+        display: inline-block;
+        background-color: #ff453a;
+        color: black;
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 0.8rem;
+        text-decoration: none;
+        margin-top: 10px;
+    }
+
+    .article-container {
+        max-width: 1500px;
+        margin: 40px auto;
+        padding: 20px;
+        border-radius: 0;
+        background-color: #2c2c2e;
+    }
+    .article-img {
+        width: 100%;
+        height: auto;
+        max-height: 600px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    .article-source {
+        font-style: italic;
+        color: #a1a1a6;
+    }
+    .article-content {
+        white-space: pre-wrap;
+    }
+}
+
